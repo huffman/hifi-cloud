@@ -39,3 +39,5 @@
   git:
     dest: "/home/vagrant/{{ item.destination }}"
     repo: "{{ item.url }}"
+  with_items:
+    - "{{ development.repos }}"
