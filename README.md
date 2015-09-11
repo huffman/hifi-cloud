@@ -20,7 +20,7 @@ $/hifi-cloud$ pip install -r < requirements.txt
 Once you're done working in the virtual environment type:
 
 ```
-deactivate
+~$ deactivate
 ```
 
 To return to your normal shell.
