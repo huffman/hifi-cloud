@@ -1,0 +1,41 @@
+---
+- name: Add required repositories
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ development.repositories }}"
+
+- name: Install apt packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+    force: yes
+  with_items:
+    - "{{ development.packages }}"
+
+- name: Install alternatives
+  shell: "update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9"
+  args:
+    executable: "/bin/bash"
+
+- name: Set QT_CMAKE_PREFIX_PATH env for all users
+  shell: "echo QT_CMAKE_PREFIX_PATH={{ development.paths.qt }} >> /etc/environment"
+  args:
+    executable: "/bin/bash"
+
+- name: Create swap
+  shell: "fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile"
+  args:
+    executable: "/bin/bash"
+
+- name: Persist swap
+  shell: "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
+  args:
+    executable: "/bin/bash"
+
+- name: Clone git repositories
+  git:
+    dest: "/home/vagrant/{{ item.destination }}"
+    repo: "{{ item.url }}"
