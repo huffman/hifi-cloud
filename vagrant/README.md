@@ -28,8 +28,8 @@ Ubuntu 14.04 development and staging environment for backend High Fidelity Stack
 You will get the master highfidelity/hifi repo cloned in the vagrant's user ~. There is no need to set any environment variables, simply:
 
 ```
-~$ mkdir hifi/build
-~$ cd hifi/build
+~$ mkdir master-hifi/build
+~$ cd master-hifi/build
 ~$ cmake ..
 ~$ make
 ```
