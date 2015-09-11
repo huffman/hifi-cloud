@@ -10,11 +10,11 @@ You will need:
 > - virtualenv (https://virtualenv.pypa.io/en/latest/installation.html)
 
 ```
-git clone https://github.com/highfidelity/hifi-cloud
-virtualenv hifi-cloud
-cd hifi-cloud
-. bin/activate
-pip install -r < requirements.txt
+~$ git clone https://github.com/highfidelity/hifi-cloud
+~$ virtualenv hifi-cloud
+~$ cd hifi-cloud
+$/hifi-cloud$. bin/activate
+$/hifi-cloud$ pip install -r < requirements.txt
 ```
 
 Once you're done working in the virtual environment type:
