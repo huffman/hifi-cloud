@@ -1,5 +1,5 @@
 ---
-development:
+hifi_ubuntu_dev:
   repositories:
     - "deb http://hifi-debian-repo.s3.amazonaws.com/ stable main"
     - "ppa:george-edison55/cmake-3.x"

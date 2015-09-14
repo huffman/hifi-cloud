@@ -1,6 +1,0 @@
----
-- hosts: all
-  user: vagrant
-  sudo: True
-  roles:
-    - "development"
