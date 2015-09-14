@@ -1,0 +1,4 @@
+---
+- name: Entering hifi-ubuntu-dev role
+  debug:
+    msg: "System {{ inventory_hostname }}"
