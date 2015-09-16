@@ -39,10 +39,10 @@
   tags:
     - "swap"
 
-- name: Clone git repositories
-  git:
-    dest: "~/{{ item.destination }}"
-    repo: "{{ item.url }}"
-  sudo: no
-  with_items:
-    - "{{ hifi_ubuntu_dev.repos }}"
+#- name: Clone git repositories
+#  git:
+#    dest: "/home/vagrant/{{ item.destination }}"
+#    repo: "{{ item.url }}"
+#  sudo: no
+#  with_items:
+#    - "{{ hifi_ubuntu_dev.repos }}"
