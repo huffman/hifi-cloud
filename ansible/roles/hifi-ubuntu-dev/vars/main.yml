@@ -23,6 +23,8 @@ hifi_ubuntu_dev:
     - "libpulse0"
     - "libgstreamer0.10-0"
     - "libgstreamer-plugins-base0.10-0"
+    - "libicu52"
+    - "libxcomposite1"
   paths:
     qt: "/usr/local/Qt5.4.2/lib/cmake"
   repos:
