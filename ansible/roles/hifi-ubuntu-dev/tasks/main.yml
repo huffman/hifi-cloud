@@ -29,16 +29,20 @@
   shell: "fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile"
   args:
     executable: "/bin/bash"
+  tags:
+    - "swap"
 
 - name: Persist swap
   shell: "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
   args:
     executable: "/bin/bash"
+  tags:
+    - "swap"
 
-- name: Clone git repositories
-  git:
-    dest: "/home/vagrant/{{ item.destination }}"
-    repo: "{{ item.url }}"
-  sudo: no
-  with_items:
-    - "{{ hifi_ubuntu_dev.repos }}"
+#- name: Clone git repositories
+#  git:
+#    dest: "/home/vagrant/{{ item.destination }}"
+#    repo: "{{ item.url }}"
+#  sudo: no
+#  with_items:
+#    - "{{ hifi_ubuntu_dev.repos }}"
