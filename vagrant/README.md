@@ -9,15 +9,15 @@ Vagrant Environments
 ###Loading an environment
 
 ```
-~/hifi-cloud$ cd hifi-ubuntu-dev
-~/hifi-cloud/hifi-ubuntu-dev$ vagrant up
-~/hifi-cloud/hifi-ubuntu-dev$ vagrant ssh
+~/hifi-cloud$ cd vagrant/hifi-ubuntu-dev
+~/hifi-cloud/vagrant/hifi-ubuntu-dev$ vagrant up
+~/hifi-cloud/vagrant/hifi-ubuntu-dev$ vagrant ssh
 ```
 
 ###Destroying an environment
 
 ```
-~/hifi-cloud/hifi-ubuntu-dev$ vagrant destroy
+~/hifi-cloud/vagrant/hifi-ubuntu-dev$ vagrant destroy
 ```
 
 Environments
