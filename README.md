@@ -13,8 +13,8 @@ You will need:
 ~$ git clone https://github.com/highfidelity/hifi-cloud
 ~$ virtualenv hifi-cloud
 ~$ cd hifi-cloud
-$/hifi-cloud$. bin/activate
-$/hifi-cloud$ pip install -r < requirements.txt
+$/hifi-cloud$ . bin/activate
+$/hifi-cloud$ pip install -r requirements.txt
 ```
 
 Once you're done working in the virtual environment type:
